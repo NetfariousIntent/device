@@ -24,7 +24,7 @@ TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
 
 # Kernel config
 TARGET_KERNEL_SOURCE := kernel/samsung/a3y17lte
-TARGET_KERNEL_CONFIG := a3y17lte_defconfig
+TARGET_KERNEL_CONFIG := lineage-a3y17lte_defconfig
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
 BOARD_KERNEL_SEPARATED_DT := true
