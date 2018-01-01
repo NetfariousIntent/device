@@ -51,20 +51,17 @@ BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/bluetooth/libbt_vndcfg.txt
 TARGET_SEC_FP_HAL_VARIANT := bauth
 
 # Wifi
-BOARD_WLAN_DEVICE                := bcmdhd
+BOARD_HAS_QCOM_WLAN              := true
+BOARD_WLAN_DEVICE                := qcwcn
+BOARD_HOSTAPD_DRIVER             := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+#WIFI_DRIVER_FW_PATH_AP           := "ap"
+#WIFI_DRIVER_FW_PATH_STA          := "sta"
+WIFI_DRIVER_FW_PATH_P2P         := "p2p"
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 WPA_SUPPLICANT_USE_HIDL          := true
-BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
-BOARD_HOSTAPD_DRIVER             := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_bcmdhd
-WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/dhd/parameters/firmware_path"
-WIFI_DRIVER_NVRAM_PATH_PARAM     := "/sys/module/dhd/parameters/nvram_path"
-WIFI_DRIVER_NVRAM_PATH           := "/system/etc/wifi/nvram_net.txt"
-WIFI_DRIVER_FW_PATH_STA          := "/system/etc/wifi/bcmdhd_sta.bin"
-WIFI_DRIVER_FW_PATH_AP           := "/system/etc/wifi/bcmdhd_apsta.bin"
-WIFI_BAND                        := 802_11_ABG
-WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/qca_cld/qca_cld_wlan.ko"
 
 # Recovery
 TARGET_OTA_ASSERT_DEVICE := a3y17lte
