@@ -75,3 +75,17 @@ $(call inherit-product, device/samsung/exynos7870-common/device-common.mk)
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/a3y17lte/a3y17lte-vendor.mk)
+
+# adb 
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+       ro.secure=0 \
+       ro.adb.secure=0 \
+       ro.hardware=universal7580 \
+       persist.service.adb.enable=1 \
+       persist.service.debuggable=1 \
+       persist.sys.usb.config=adb \
+       ro.securestorage.support=false
+
+endif
