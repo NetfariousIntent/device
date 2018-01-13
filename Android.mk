@@ -20,4 +20,12 @@ ifneq ($(filter a3y17lte, $(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
+# Create links for OpenCL files
+$(shell mkdir -p  $(TARGET_OUT)/vendor/lib; \
+mkdir -p  $(TARGET_OUT)/vendor/lib/hw; \
+ln -sf /vendor/lib/egl/libGLES_android.so $(TARGET_OUT)/vendor/lib/libOpenCL.so.1.1; \
+ln -sf /vendor/lib/egl/libGLES_android.so $(TARGET_OUT)/vendor/lib/libOpenCL.so.1; \
+ln -sf /vendor/lib/egl/libGLES_android.so $(TARGET_OUT)/vendor/lib/libOpenCL.so; \
+ln -sf /vendor/lib/egl/libGLES_android.so $(TARGET_OUT)/vendor/lib/hw/vulkan.exynos5.so)
 endif
+
