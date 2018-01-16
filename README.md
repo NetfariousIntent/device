@@ -1,13 +1,13 @@
-Device configuration for Samsung Galaxy A3 2017
+Device configuration for the Samsung Galaxy A3 2017 (A320F/FL/xx)
 =========================================
 
-The A3 2017 (codenamed _"a3y17lte"_) is a 4.7" mid-randge smartphone from Samsung.
+The A3 2017 (codenamed _"a3y17lte"_) is a 4.7" mid-range smartphone made by Samsung.
 
-It was released in january 2017.
+It was released in January 2017.
 
-_Notice: **This is a work in progress, it may not work**_
+_Notice: **This is a work in progress tree, it may not work**_
 
-## Device specifications
+## Device specifications ## 
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -17,9 +17,11 @@ GPU     | Mali-T830 MP1
 Memory  | 2 GB RAM
 Shipped Android Version | 6.0.1, upgradable to 7.0
 Storage | 16 GB
-Battery | Li-Po 2350mAh battery
+Battery | Li-Ion 2350mAh battery
 Display | 720 x 1080 pixels, 4.7", SUPER AMOLED 
-Camera  | 13 Mp rear cam and 8 Mp front cam
+Camera  | 13 MP rear cam and 8 MP front cam
+Other capabilities | NFC, Audio stream
+Sensors | Accelerometer, Proximity, FingerPrint, Gyroscope, compass, barometer
 
 ## Device Preview
 
